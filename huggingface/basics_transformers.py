@@ -10,13 +10,13 @@ HF_TOKEN=os.environ['HF_TOKEN']
 
 
 model_name = "meta-llama/Llama-3.2-1B"
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Custom model storage directory
-model_path = "./huggingface/models"
-tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=model_path)
-model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=model_path)
+# model_path = "./huggingface/models"
+# tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=model_path)
+# model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=model_path)
 
 
 # Set device to CPU or GPU
